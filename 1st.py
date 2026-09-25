@@ -88,7 +88,7 @@ while c*d == a:
 matrix = data.reshape()
 
 print(matrix)
-print(matrix.shape)"""
+print(matrix.shape)
 import numpy as np
 
 data = np.array([
@@ -111,3 +111,72 @@ matrix = data.reshape(best_rows, best_cols)
 print("Number of elements:", a)
 print("Shape:", matrix.shape)
 print(matrix)
+#######################################
+import numpy as np
+
+# User input
+user_input = input("Enter numbers separated by spaces: ")
+
+# Convert input into NumPy array
+data = np.array([int(x) for x in user_input.split()])
+
+print("Your data:")
+print(data)
+
+# Number of elements
+a = len(data)
+
+# Find a suitable shape
+best_rows = 1
+best_cols = a
+
+for i in range(1, int(np.sqrt(a)) + 1):
+    if a % i == 0:
+        best_rows = i
+        best_cols = a // i
+
+# Reshape
+matrix = data.reshape(best_rows, best_cols)
+
+print("Matrix:")
+print(matrix)
+
+print("Shape:", matrix.shape)
+import numpy as np
+
+#marks = np.array([70, 80, 65, 90, 75])
+
+#print(marks < 75)
+x = np.random.randint(1, 100, (2,3))
+y = x * 2 + 5
+
+print(x)
+print(y)
+numbers = np.arange(0, 20, 4)
+
+print(numbers)
+numbers = np.linspace(1, 10, 3)
+
+print(numbers)
+"""
+import numpy as np
+
+A = np.array([
+    [1, 2],
+    [3, 4]
+])
+
+B = np.array([
+    [5, 6],
+    [7, 8]
+])
+
+print(A+B,"sum")
+
+print(A-B,"subtraction")
+print(A*B,"multiplication")
+print(A/B,"division")
+print(B*A,"matrix multiplication")
+
+print(A@B,"-------------")
+print(B@A,"-------------")
