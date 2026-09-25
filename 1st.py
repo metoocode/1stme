@@ -40,10 +40,31 @@ df_label =df.copy()
 le =LabelEncoder()
 df_label['Gender_Encoded'] = le.fit_transform(df_label[''])
 print("hi")
-print(df_label,"hello")"""
+print(df_label,"hello")
 import numpy as np
 
 numbers = np.array([10, 20, 30, 40, 50])
 
 print(numbers)
 print(type(numbers))
+
+import numpy as np
+
+marks = np.array([78, 85, 91, 67, 88])
+
+print(marks)
+print(marks[0])
+print(marks[2])
+print(marks + 5)"""
+import numpy as np
+
+matrix = np.array([
+    [10, 20, 30],
+    [40, 50, 60]
+])
+
+print(matrix)
+print(matrix.shape)
+print(matrix[0, 0])
+print(matrix[1, 2])
+print(matrix[:, 1])
