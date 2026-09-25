@@ -49,14 +49,15 @@ print(numbers)
 print(type(numbers))
 
 import numpy as np
+import numpy as np
 
 marks = np.array([78, 85, 91, 67, 88])
 
 print(marks)
 print(marks[0])
 print(marks[2])
-print(marks + 5)"""
-import numpy as np
+print(marks + 5)
+
 
 matrix = np.array([
     [10, 20, 30],
@@ -68,3 +69,45 @@ print(matrix.shape)
 print(matrix[0, 0])
 print(matrix[1, 2])
 print(matrix[:, 1])
+marks = np.array([70, 80, 90, 60, 100])
+
+
+print(np.sum(marks))
+print(np.mean(marks))
+print(np.max(marks))
+print(np.min(marks))
+import numpy as np
+data = np.array([10, 20, 30, 40, 50, 60, 70, 80,100,120,234,567,343,5453,35,34,54,167])
+a =len(data)
+print(a)
+c,d=0
+while c*d == a:
+
+  i=+1
+
+matrix = data.reshape()
+
+print(matrix)
+print(matrix.shape)"""
+import numpy as np
+
+data = np.array([
+    10, 20, 30, 40, 50, 60, 70, 80,
+    100, 120, 234, 567, 343, 5453, 35, 34,23,33
+])
+
+a = len(data)
+
+best_rows = 1
+best_cols = a
+
+for i in range(1, int(np.sqrt(a)) + 1):
+    if a % i == 0:
+        best_rows = i
+        best_cols = a // i
+
+matrix = data.reshape(best_rows, best_cols)
+
+print("Number of elements:", a)
+print("Shape:", matrix.shape)
+print(matrix)
