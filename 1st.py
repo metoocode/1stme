@@ -32,7 +32,7 @@ print(df_drop)
 df['Age'].fillna(df['Age'].mean(),inplace= True)
 df['salary'].fillna(df['salary'].mean(), inplace=True)
 print(df)
-print (df.isnull().mean()* 100)"""
+print (df.isnull().mean()* 100)
 from sklearn.preprocessing import LabelEncoder
 import pandas as pd
 df = pd.read_excel("Book1.xlsx")
@@ -40,4 +40,10 @@ df_label =df.copy()
 le =LabelEncoder()
 df_label['Gender_Encoded'] = le.fit_transform(df_label[''])
 print("hi")
-print(df_label,"hello")
+print(df_label,"hello")"""
+import numpy as np
+
+numbers = np.array([10, 20, 30, 40, 50])
+
+print(numbers)
+print(type(numbers))
