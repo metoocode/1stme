@@ -171,12 +171,21 @@ B = np.array([
     [7, 8]
 ])
 
-print(A+B,"sum")
 
-print(A-B,"subtraction")
-print(A*B,"multiplication")
-print(A/B,"division")
-print(B*A,"matrix multiplication")
+#print(A-B,"subtraction")
+#print(A+B,"sum")
+#print(A*B,"multiplication")
+#print(A/B,"division")
+#print(B*A,"matrix multiplication")
 
-print(A@B,"-------------")
-print(B@A,"-------------")
+#print(A@B,"-------------")
+#print(B@A,"-------------")
+
+
+c = np.array([
+    [1, 2, 3],
+    [4, 5, 6]
+])
+
+print(np.sum(c, axis=0))
+
