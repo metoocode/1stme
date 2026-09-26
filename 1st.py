@@ -158,7 +158,7 @@ print(numbers)
 numbers = np.linspace(1, 10, 3)
 
 print(numbers)
-"""
+
 import numpy as np
 
 A = np.array([
@@ -170,7 +170,7 @@ B = np.array([
     [5, 6],
     [7, 8]
 ])
-
+"""
 
 #print(A-B,"subtraction")
 #print(A+B,"sum")
@@ -181,11 +181,55 @@ B = np.array([
 #print(A@B,"-------------")
 #print(B@A,"-------------")
 
-
+"""
 c = np.array([
     [1, 2, 3],
     [4, 5, 6]
 ])
 
 print(np.sum(c, axis=0))
+print(np.sum(c, axis=1))
 
+print(np.min(c))
+print(np.max(c))
+print(np.argmin(c))
+print(np.argmax(c))
+a = np.array([10, 20, 30])
+
+b = a.copy()
+c=b.copy()
+c[2] = 3000
+
+b[0] = 100
+
+print(a)
+print(b)
+print(c)
+marks = np.array([82, 45, 91, 67, 76])
+
+print(np.sort(marks))
+print(np.where(marks > 75))"""
+import numpy as np
+
+# User enters marks
+user_input = input("Enter marks separated by spaces: ")
+
+marks = np.array([int(x) for x in user_input.split()])
+
+print("\nMarks:", marks)
+
+# Basic statistics
+print("Total:", np.sum(marks))
+print("Average:", np.mean(marks))
+print("Highest:", np.max(marks))
+print("Lowest:", np.min(marks))
+
+# Positions
+print("Highest mark index:", np.argmax(marks))
+print("Lowest mark index:", np.argmin(marks))
+
+# Filtering
+print("Marks above 75:", marks[marks > 75])
+
+# Sorted marks
+print("Sorted marks:", np.sort(marks))
