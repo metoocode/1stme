@@ -209,6 +209,9 @@ marks = np.array([82, 45, 91, 67, 76])
 
 print(np.sort(marks))
 print(np.where(marks > 75))"""
+
+
+"""
 import numpy as np
 
 # User enters marks
@@ -232,4 +235,21 @@ print("Lowest mark index:", np.argmin(marks))
 print("Marks above 75:", marks[marks > 75])
 
 # Sorted marks
-print("Sorted marks:", np.sort(marks))
+print("Sorted marks:", np.sort(marks))"""
+import numpy as np
+
+data = np.array([10, 20, 30, 40, 50, 60,70, 80, 90, 100, 110, 120, 130, 140, 150])
+
+parts = np.split(data, 3)
+
+print(parts)
+matrix = np.array([
+    [1, 2],
+    [3, 4],
+    [5, 6],
+    [7, 8]
+])
+
+parts = np.vsplit(matrix, 2)
+
+print(parts)
