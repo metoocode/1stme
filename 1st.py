@@ -235,7 +235,7 @@ print("Lowest mark index:", np.argmin(marks))
 print("Marks above 75:", marks[marks > 75])
 
 # Sorted marks
-print("Sorted marks:", np.sort(marks))"""
+print("Sorted marks:", np.sort(marks))
 import numpy as np
 
 data = np.array([10, 20, 30, 40, 50, 60,70, 80, 90, 100, 110, 120, 130, 140, 150])
@@ -253,3 +253,126 @@ matrix = np.array([
 parts = np.vsplit(matrix, 2)
 
 print(parts)
+matrix = np.array([
+    [1, 2, 3, 4],
+    [5, 6, 7, 8]
+])
+
+parts = np.hsplit(matrix, 2)
+
+print(parts)
+
+#np.insert(array, index, value)
+# append → add at the end
+#insert → add at a specific index
+#delete  → remove an element
+a = np.array([5, 10, 15, 20])
+print(a)
+a = np.append(a, 25)
+print(a)
+a = np.insert(a, 2, 12)
+print(a)
+a = np.delete(a, 0)
+
+print(a)
+print(np.unique(data))
+values, counts = np.unique(data, return_counts=True)
+
+print(values)
+print(counts)
+
+import numpy as np
+
+# Data with a missing value
+data = np.array([10, 20, np.nan, 40, 50])
+
+print("Original data:")
+print(data)
+
+# 1. Find missing values
+missing = np.isnan(data)
+print("\nMissing values:")
+print(missing)
+
+# 2. Count missing values
+count = np.sum(np.isnan(data))
+print("\nNumber of missing values:", count)
+
+# 3. Normal mean
+print("\nNormal mean:", np.mean(data))
+
+# 4. Mean ignoring NaN
+print("Mean ignoring NaN:", np.nanmean(data))
+
+# 5. Other calculations ignoring NaN
+print("Sum:", np.nansum(data))
+print("Minimum:", np.nanmin(data))
+print("Maximum:", np.nanmax(data))
+
+# 6. Replace NaN with 0
+clean_data = np.nan_to_num(data, nan=0)
+
+print("\nData after replacing NaN with 0:")
+print(clean_data)
+
+import numpy as np
+
+data = np.array([1, 4, 9, 16, 25])
+
+print("Original:", data)
+
+# Square root
+print("Square root:", np.sqrt(data))
+
+# Absolute value
+numbers = np.array([-10, -5, 0, 5, 10])
+print("Absolute:", np.abs(numbers))
+
+# Exponential
+print("Exponential:", np.exp(data))
+
+# Natural logarithm
+print("Log:", np.log(data))
+
+# Sine
+print("Sine:", np.sin(data))
+
+# Cosine
+print("Cosine:", np.cos(data))
+print("Tangent:", np.tan(data))
+"""
+##############################################
+import numpy as np
+a=np.array([[1,2,3],
+            [4,5,6],
+            [7,8,9]
+
+            ])
+b= np.array([[7,8,9],
+            [10,11,12],
+            [13,15,17]
+            ])
+print("dot")
+print(np.dot(a,b))
+print("multi")
+print(a@b)
+print("determinant")
+print(np.linalg.det(b))
+print("inverse")
+#print(np.linalg.inv(a))
+c= np.array([[1,2],
+             [3,4]
+             ])
+d= np.array([5,11])
+solution = np.linalg.solve(c,d)
+print(solution)
+#np.random.seed(42)
+#print(np.random.randint(1, 100, 5))
+#print(np.random.randint(1, 100, 5))
+matrix = np.random.randint(1, 10, (3, 3))
+print("\nRandom matrix:")
+print(matrix)
+rng = np.random.default_rng(42)
+numbers = rng.integers(1, 100, 5)
+print("Random integers:")
+print(numbers)
