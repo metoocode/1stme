@@ -44,7 +44,7 @@ df.fillna(0, inplace=True)
 print(df)
 df.dropna(inplace=True)
 print(df)
-"""
+
 import numpy as np
 import pandas as pd
 employee_data = {
@@ -64,3 +64,19 @@ print(em)
 print(sa)
 merged_df = pd.merge(em, sa, on='Employee ID', how='inner')
 print(merged_df)
+"""
+import numpy as np
+import pandas as pd
+data = {
+  'category': ['A', 'B', 'A', 'C', 'B', 'A'],
+  'store': [10, 20, 30, 40, 50,60],
+  'sales': [100, 200, 300, 400, 500,600],
+  'quantity': [1, 2, 3, 4, 5,6],
+  'date': pd.date_range('2023-01-01', periods=6, freq='2D')
+}
+am =pd.DataFrame(data)
+v=am.groupby('category').agg({'sales':'sum','quantity':'mean'})
+print(am)
+print(v) 
+m= pd.pivot_table(am, values='sales', index='category', columns='store', aggfunc='sum', fill_value=0)
+print(m)
