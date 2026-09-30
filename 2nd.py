@@ -7,7 +7,7 @@ d = {1:10,2:20,3:30}
 
 print(pd.Series(my_list, index=labels))
 print(arr)
-print(d)"""
+print(d)
 import numpy as np
 import pandas as pd
 data = {
@@ -17,4 +17,50 @@ data = {
   'salary': [50000, 60000, 70000, 80000]
 
 }
-print(pd.DataFrame(data))
+columns = ['name', 'age', 'city', 'salary']
+
+df = pd.DataFrame(data, columns=columns)
+print(df['name'])
+print(df[0:2])
+df ["kk"] = ["dog","cat","rat","bat"]
+print(df)
+df.drop(columns=['kk'], inplace=True)
+print(df)
+print(df.loc[1:2])
+
+import numpy as np
+import pandas as pd
+data = {
+  'A':[1,2,np.nan,4,5],
+  'B':[10,20,30,np.nan,50],
+  'C':[100,200,300,400,np.nan],
+  'D':[1000,2000,3000,4000,5000]
+}
+
+df = pd.DataFrame(data)
+print(df)
+print(df.isna().sum())
+df.fillna(0, inplace=True)
+print(df)
+df.dropna(inplace=True)
+print(df)
+"""
+import numpy as np
+import pandas as pd
+employee_data = {
+  'Employee ID': [101, 102, 103, 104, 105],
+  'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva'],  
+  'Department': ['HR', 'Finance', 'IT', 'Marketing', 'Sales']
+  
+}
+salaries = {
+  'Employee ID': [101, 102, 103, 104, 105], 
+  'Salary': [50000, 60000, 70000, 80000, 90000],
+  'bonus': [5000, 6000, 7000, 8000, 9000]
+}
+sa =pd.DataFrame(salaries)
+em=pd.DataFrame(employee_data)
+print(em)
+print(sa)
+merged_df = pd.merge(em, sa, on='Employee ID', how='inner')
+print(merged_df)
