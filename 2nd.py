@@ -67,6 +67,7 @@ print(merged_df)
 """
 import numpy as np
 import pandas as pd
+"""
 data = {
   'category': ['A', 'B', 'A', 'C', 'B', 'A'],
   'store': [10, 20, 30, 40, 50,60],
@@ -80,3 +81,22 @@ print(am)
 print(v) 
 m= pd.pivot_table(am, values='sales', index='category', columns='store', aggfunc='sum', fill_value=0)
 print(m)
+df=pd.DataFrame({
+    'A':[1,2,3,4,5],
+    'B':[10,20,30,40,50],
+    'c':[100,200,300,400,500]
+})
+p=df.shape
+q=df.size
+w=df.columns
+def square(x):
+    return x**2
+df['B'] = df['B'].apply(square)
+
+
+h=df.describe()
+print(h)
+print(df)
+print(q)
+print(w)
+print(p)"""
