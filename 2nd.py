@@ -67,6 +67,7 @@ print(merged_df)
 """
 import numpy as np
 import pandas as pd
+from sympy import false, true
 """
 data = {
   'category': ['A', 'B', 'A', 'C', 'B', 'A'],
@@ -100,3 +101,27 @@ print(df)
 print(q)
 print(w)
 print(p)"""
+import pandas as pd
+import numpy as np  
+df = pd.read_csv('anime.csv')
+#print(df)
+#a=df.loc[2]
+#print(a)
+def extract_epidoes(txt):
+  check= False 
+  data =""
+  for i in txt:
+    if i == ')':
+      check = False
+      break
+    if   i == '(':
+      check = True
+    if check == True:
+      data += i
+  return data
+df['Episodes'] = df['Episodes'].str.replace("eps","")
+df["Episodes"]=df["Title"].apply(extract_epidoes)
+print(df)
+
+    
+  
