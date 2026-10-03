@@ -100,7 +100,7 @@ print(h)
 print(df)
 print(q)
 print(w)
-print(p)"""
+print(p)
 import pandas as pd
 import numpy as np  
 df = pd.read_csv('anime.csv')
@@ -122,6 +122,12 @@ def extract_epidoes(txt):
 df['Episodes'] = df['Episodes'].str.replace("eps","")
 df["Episodes"]=df["Title"].apply(extract_epidoes)
 print(df)
+"""
+import matplotlib.pyplot as plt
 
-    
+marks = [45, 6000, 72, 8000, 900111]
+
+plt.plot(marks)
+
+plt.show()
   
