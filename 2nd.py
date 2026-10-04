@@ -67,6 +67,7 @@ print(merged_df)
 """
 import numpy as np
 import pandas as pd
+from sklearn import tests
 from sympy import false, true
 """
 data = {
@@ -156,7 +157,7 @@ plt.title("Programming Learning Hours")
 plt.xlabel("Language")
 plt.ylabel("Hours")
 
-plt.show()"""
+plt.show()
 import matplotlib.pyplot as plt
 
 subjects = ["Physics", "Chemistry", "Maths"]
@@ -167,5 +168,65 @@ plt.barh(subjects, marks)
 plt.title("Subject-wise Marks")
 plt.xlabel("Marks")
 plt.ylabel("Subjects")
+
+plt.show()
+import matplotlib.pyplot as plt
+
+hours = [1, 2, 3, 4, 5, 6]
+marks = [35, 42, 50, 61, 70, 78]
+
+plt.scatter(hours, marks)
+#plt.plot()       # line/trend
+#plt.bar()        # category comparison
+#plt.barh()       # horizontal comparison
+#plt.scatter()    # relationship between variables
+plt.title("Study Hours vs Marks")
+plt.xlabel("Study Hours")
+plt.ylabel("Marks")
+
+plt.show()
+
+import matplotlib.pyplot as plt
+
+marks = [45, 52, 55, 61, 63, 65, 67, 68, 70, 72,
+         74, 75, 77, 80, 82, 84, 86, 89, 92, 95]
+
+plt.hist(marks,bins=5)
+
+plt.title("Distribution of Marks")
+plt.xlabel("Marks")
+plt.ylabel("Number of Students")
+
+plt.show()
+import matplotlib.pyplot as plt
+days = [1, 2, 3, 4, 5]
+hours = [3, 5, 4, 7, 6]
+plt.plot(
+    days,
+    hours,
+    marker="o",
+    linewidth=2,
+    markersize=7,
+    alpha=0.3
+)
+plt.title("Study Hours")
+plt.xlabel("Day")
+plt.ylabel("Hours")
+plt.show()"""
+import matplotlib.pyplot as plt
+
+tests = [1, 2, 3, 4, 5]
+
+physics = [60, 65, 72, 78, 85]
+maths = [45, 55, 62, 70, 80]
+
+plt.plot(tests, physics, marker="o", label="Physics")
+plt.plot(tests, maths, marker="o", label="Maths")
+
+plt.title("Physics vs Maths")
+plt.xlabel("Test Number")
+plt.ylabel("Marks")
+
+plt.legend()
 
 plt.show()
