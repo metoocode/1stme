@@ -123,11 +123,49 @@ df['Episodes'] = df['Episodes'].str.replace("eps","")
 df["Episodes"]=df["Title"].apply(extract_epidoes)
 print(df)
 """
+#import matplotlib.pyplot as plt
+
+#marks = [45, 16, 7, 80, 9]
+#test = [1, 2, 3, 4, 5]
+
+#plt.plot(test ,marks)
+
+#plt.show()
+#import matplotlib.pyplot as plt
+
+#days = [1, 2, 3, 4, 5, 6, 7]
+#hours = [3, 5, 4, 6, 7, 5, 8]
+
+#plt.plot(days, hours,marker="o")
+
+#plt.title("My Weekly Study")
+#plt.xlabel("Day")
+#plt.ylabel("Study Hours")
+
+#
+# plt.show()
+"""
 import matplotlib.pyplot as plt
 
-marks = [45, 6000, 72, 8000, 900111]
+languages = ["Python", "C++", "Java", "JavaScript"]
+hours = [20, 15, 8, 12]
 
-plt.plot(marks)
+plt.bar(languages, hours)
+
+plt.title("Programming Learning Hours")
+plt.xlabel("Language")
+plt.ylabel("Hours")
+
+plt.show()"""
+import matplotlib.pyplot as plt
+
+subjects = ["Physics", "Chemistry", "Maths"]
+marks = [75, 82, 68]
+
+plt.barh(subjects, marks)
+
+plt.title("Subject-wise Marks")
+plt.xlabel("Marks")
+plt.ylabel("Subjects")
 
 plt.show()
-  
