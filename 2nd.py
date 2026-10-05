@@ -212,7 +212,7 @@ plt.plot(
 plt.title("Study Hours")
 plt.xlabel("Day")
 plt.ylabel("Hours")
-plt.show()"""
+plt.show()
 import matplotlib.pyplot as plt
 
 tests = [1, 2, 3, 4, 5]
@@ -228,5 +228,29 @@ plt.xlabel("Test Number")
 plt.ylabel("Marks")
 
 plt.legend()
+
+plt.show()
+import matplotlib.pyplot as plt
+
+subjects = ["Physics", "Chemistry", "Maths"]
+hours = [10, 8, 12]
+
+plt.pie(hours, labels=subjects)
+
+plt.title("Weekly Study Time")
+
+plt.show()"""
+import matplotlib.pyplot as plt
+
+subjects = ["Physics", "Chemistry", "Maths"]
+hours = [10, 8, 12]
+
+plt.pie(
+    hours,
+    labels=subjects,
+    autopct="%1.1f%%"
+)
+
+plt.title("Weekly Study Time")
 
 plt.show()
