@@ -239,7 +239,7 @@ plt.pie(hours, labels=subjects)
 
 plt.title("Weekly Study Time")
 
-plt.show()"""
+plt.show()
 import matplotlib.pyplot as plt
 
 subjects = ["Physics", "Chemistry", "Maths"]
@@ -253,4 +253,25 @@ plt.pie(
 
 plt.title("Weekly Study Time")
 
+plt.show()"""
+import matplotlib.pyplot as plt
+days = [1,2,3,4,5]
+hours  =[3,5,4,7,6]
+marks = [40, 50, 55, 70, 80]
+
+# First graph
+plt.subplot(2,1,1)
+
+plt.plot(days,hours, marker ="o")
+plt.title ("study hours")
+plt.ylabel("hours")
+
+# Second graph
+plt.subplot(2,1,2)
+plt.plot(days ,marks , marker ="o")
+plt.title("marks")
+plt.title("day")
+plt.xlabel("marks")
+plt.tight_layout()
 plt.show()
+
