@@ -282,7 +282,7 @@ ax.plot(days, hours, marker="o")
 ax.set_title("Study Hours")
 ax.set_xlabel("Day")
 ax.set_ylabel("Hours")
-plt.show()"""
+plt.show()
 import matplotlib.pyplot as plt
 days = [1, 2, 3, 4, 5]
 hours = [3, 5, 4, 7, 6]
@@ -293,7 +293,9 @@ ax[0].set_title("Study Hours")
 ax[1].plot(days,marks, marker="o")
 ax[1].set_title("Marks")
 plt.tight_layout()
-plt.show()
+plt.show()"""
+
+
 
 
 
