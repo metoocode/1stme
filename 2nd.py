@@ -283,20 +283,98 @@ ax.set_title("Study Hours")
 ax.set_xlabel("Day")
 ax.set_ylabel("Hours")
 plt.show()
+
+import matplotlib.pyplot as plt
+days = [1,2,3,4,5]
+hours = [3,5,4,7,6]
+fig,ax = plt.subplots()
+ax.plot(days,hours,marker ="o")
+ax.set_xlim(1,6)
+ax.set_ylim(1,8)
+plt.show()
+import matplotlib.pyplot as plt
+days = [1, 2, 7, 4, 5]
+hours = [2, 5, 4, 7, 6]
+fig, ax = plt.subplots()
+ax.plot(days, hours, marker="o")
+ax.set_xlim(1, 10)
+ax.set_ylim(0, 10)
+ax.set_xticks([1, 2, 3, 4, 5])
+ax.set_xticklabels(["Mon", "Tue", "Wed", "Thu", "Fri"])
+ax.set_yticks([0, 2, 4, 6, 8, 10])
+ax.set_title("Study Hours")
+ax.set_xlabel("Day")
+ax.set_ylabel("Hours")
+plt.show()
+import matplotlib.pyplot as plt
+days = [1,2,3,4,5]
+hours = [3,4,9,8,5]
+fig,ax = plt.subplots()
+ax.plot(days , hours , marker = "o",color = "yellow")
+ax.annotate (
+  "highest study time ",
+  xy = (3,9),
+  xytext = (1,9),
+  arrowprops= dict(arrowstyle = "->", color = "red")
+
+)
+ax.set_title("study hours ")
+ax.set_xlabel("day")
+ax.set_ylabel("hours")
+plt.show()
+import matplotlib.pyplot as plt
+months = ["Jan", "Feb", "Mar", "Apr", "May"]
+sales = [20, 35, 30, 50, 45]
+fig, ax = plt.subplots()
+ax.plot(months, sales, marker="o", color="yellow")
+ax.set_title("Sales")
+ax.set_xlabel("Month")
+ax.set_ylabel("Sales")
+fig.savefig(
+    "sales.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+plt.show()
+import matplotlib.pyplot as plt
+days = [1, 2, 3, 4, 5]
+hours = [3, 5, 4, 7, 6]
+fig, ax = plt.subplots()
+ax.plot(
+  days,
+  hours,
+  color="yellow",
+  marker="o",
+  markersize=8,
+  linewidth=2,
+  alpha=0.7,
+  label="Study Hours"
+  
+)
+ax.set_title("Study Hours")
+ax.set_xlabel("Day")
+ax.set_ylabel("Hours")
+ax.grid(True, linestyle="--", alpha=0.5)
+ax.legend()
+plt.show()"""
 import matplotlib.pyplot as plt
 days = [1, 2, 3, 4, 5]
 hours = [3, 5, 4, 7, 6]
 marks = [40, 50, 55, 70, 80]
-fig,ax = plt.subplots(2,1)
-ax[0].plot(days,hours, marker="o")
-ax[0].set_title("Study Hours")
-ax[1].plot(days,marks, marker="o")
-ax[1].set_title("Marks")
+fig, ax = plt.subplots(2,2 figssize= (10 ,7))
+# 1. line chart 
+ax [0,0].plot(days,hours, marker = "o")
+ax[0,0].set_title("study hours ")
+#2. bar chart 
+ax[0,1].bar(days,hours)
+ax[0,1].set_title("study hours - bar")
+# 3. scatter plot
+ax [1,0].scatter(hours, marks)
+ax[1,0].set_title("study hours vs marks")
+ax[1,0].set_xlabel("hours")
+ax[1,0].set_ylabel("marks")
+# 4.  histogram
+ax[1,1].hist(marks,bins=5)
+ax[1,1].set_title("marks distribution")
 plt.tight_layout()
-plt.show()"""
-
-
-
-
-
-
+plt.show()
