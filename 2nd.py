@@ -356,12 +356,12 @@ ax.set_xlabel("Day")
 ax.set_ylabel("Hours")
 ax.grid(True, linestyle="--", alpha=0.5)
 ax.legend()
-plt.show()"""
+plt.show()
 import matplotlib.pyplot as plt
 days = [1, 2, 3, 4, 5]
 hours = [3, 5, 4, 7, 6]
 marks = [40, 50, 55, 70, 80]
-fig, ax = plt.subplots(2,2 figssize= (10 ,7))
+fig, ax = plt.subplots(2,2, figsize= (10,7))
 # 1. line chart 
 ax [0,0].plot(days,hours, marker = "o")
 ax[0,0].set_title("study hours ")
@@ -378,3 +378,14 @@ ax[1,1].hist(marks,bins=5)
 ax[1,1].set_title("marks distribution")
 plt.tight_layout()
 plt.show()
+"""
+import matplotlib.pyplot as plt
+months = ["Jan", "Feb", "Mar", "Apr", "May"]
+sales = [20, 35, 30, 50, 45]
+fig, ax = plt.subplots(figsize=(5, 5))
+ax.plot(months, sales, marker="o", color="blue")
+ax.set_title("Monthly Sales")
+ax.set_xlabel("Month")
+ax.set_ylabel("Sales")
+plt.show()
+
