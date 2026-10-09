@@ -378,7 +378,7 @@ ax[1,1].hist(marks,bins=5)
 ax[1,1].set_title("marks distribution")
 plt.tight_layout()
 plt.show()
-"""
+
 import matplotlib.pyplot as plt
 months = ["Jan", "Feb", "Mar", "Apr", "May"]
 sales = [20, 35, 30, 50, 45]
@@ -388,4 +388,53 @@ ax.set_title("Monthly Sales")
 ax.set_xlabel("Month")
 ax.set_ylabel("Sales")
 plt.show()
+
+import matplotlib.pyplot as plt
+subjects = ["Physics", "Chemistry", "Maths","Biology"]
+marks = [75, 82, 68, 90]
+fig, ax = plt.subplots(figsize=(9, 6))
+ax.bar(subjects, marks, color=["blue", "green", "orange", "purple"])
+ax.set_title("Subject-wise Marks")
+ax.set_xlabel("Subjects")
+ax.set_ylabel("Marks")
+ax.tick_params(axis="x", labelrotation=45)
+fig.tight_layout()
+plt.show() """
+import matplotlib.pyplot as plt
+import pandas as pd
+data = {
+    'Month': ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+    'Sales': [20, 35, 30, 50, 45],
+    'Expenses': [15, 25, 20, 30, 28]
+}
+df = pd.DataFrame(data)
+df["profit"] = df["Sales"] - df["Expenses"]
+print ("monthly profit data:")
+print(df)
+df.plot(
+  x ="month",
+  y ="sales," ,
+  kind ="line",
+  marker ="o",
+  color ="blue",
+  figsize =(8,5),
+
+)
+plt.title("Monthly Sales")
+plt.xlabel("Amount")
+plt.grid(True , alpha = 0.3)
+plt.tight_layout()
+plt.show()
+df.plot (
+x ="month",
+  y =["sales","expenses"],
+  kind ="bar",
+  color =["blue","orange"],
+  figsize =(8,5),
+)
+plt.title("Monthly Sales and Expenses")
+plt.xlabel("Month")
+plt.ylabel("Amount")  
+pl
+
 
